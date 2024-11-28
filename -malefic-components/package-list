@@ -1,0 +1,27 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:xyz.malefic.components.box////PointingToDeclaration/-malefic-components/xyz.malefic.components.box/index.html
+$dokka.location:xyz.malefic.components.box//MTBox/#androidx.compose.material.Colors#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-m-t-box.html
+$dokka.location:xyz.malefic.components.precompose////PointingToDeclaration/-malefic-components/xyz.malefic.components.precompose/index.html
+$dokka.location:xyz.malefic.components.precompose//NavWindow/#kotlin.Function0[kotlin.Unit]#androidx.compose.ui.window.WindowState#kotlin.Boolean#kotlin.String#androidx.compose.ui.graphics.painter.Painter?#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Function1[androidx.compose.ui.input.key.KeyEvent,kotlin.Boolean]#kotlin.Function1[androidx.compose.ui.input.key.KeyEvent,kotlin.Boolean]#kotlin.Function1[androidx.compose.ui.window.FrameWindowScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.precompose/-nav-window.html
+$dokka.location:xyz.malefic.components.text.typography////PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/index.html
+$dokka.location:xyz.malefic.components.text.typography//Body1/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-body1.html
+$dokka.location:xyz.malefic.components.text.typography//Body1B/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-body1-b.html
+$dokka.location:xyz.malefic.components.text.typography//Body2/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-body2.html
+$dokka.location:xyz.malefic.components.text.typography//Body2B/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-body2-b.html
+$dokka.location:xyz.malefic.components.text.typography//Heading1/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading1.html
+$dokka.location:xyz.malefic.components.text.typography//Heading1B/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading1-b.html
+$dokka.location:xyz.malefic.components.text.typography//Heading2/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading2.html
+$dokka.location:xyz.malefic.components.text.typography//Heading2B/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading2-b.html
+$dokka.location:xyz.malefic.components.text.typography//Heading3/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading3.html
+$dokka.location:xyz.malefic.components.text.typography//Heading3B/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading3-b.html
+$dokka.location:xyz.malefic.components.text.typography//Heading4/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading4.html
+$dokka.location:xyz.malefic.components.text.typography//Heading4B/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading4-b.html
+$dokka.location:xyz.malefic.components.text.typography//Heading5/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading5.html
+$dokka.location:xyz.malefic.components.text.typography//Heading5B/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading5-b.html
+$dokka.location:xyz.malefic.components.text.typography//Heading6/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading6.html
+$dokka.location:xyz.malefic.components.text.typography//Heading6B/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading6-b.html
+xyz.malefic.components.box
+xyz.malefic.components.precompose
+xyz.malefic.components.text.typography
+
