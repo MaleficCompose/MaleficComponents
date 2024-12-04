@@ -43,6 +43,12 @@ java {
   withSourcesJar()
 }
 
+kotlin {
+  jvmToolchain {
+    this.languageVersion.set(JavaLanguageVersion.of(17))
+  }
+}
+
 publishing {
   publications {
     create<MavenPublication>("maven") {
