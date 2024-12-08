@@ -8,6 +8,7 @@ import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import java.io.InputStream
 import xyz.malefic.theme.MaleficTheme
@@ -19,11 +20,21 @@ import xyz.malefic.theme.ThemeConfig
  *
  * @param colors The colors to be used in the Material Theme.
  * @param modifier The [Modifier] to be applied to the [Box].
+ * @param contentAlignment The [Alignment] of the content inside the [Box].
+ * @param propagateMinConstraints Whether the minimum constraints should be propagated.
  * @param content The content to be displayed inside the [Box].
  */
 @Composable
-fun MTBox(colors: Colors, modifier: Modifier = Modifier, content: @Composable BoxScope.() -> Unit) {
-  MaterialTheme(colors = colors) { BackgroundBox(modifier) { content() } }
+fun MaterialBox(
+  colors: Colors,
+  modifier: Modifier = Modifier,
+  contentAlignment: Alignment = Alignment.TopStart,
+  propagateMinConstraints: Boolean = false,
+  content: @Composable BoxScope.() -> Unit,
+) {
+  MaterialTheme(colors = colors) {
+    BackgroundBox(modifier, contentAlignment, propagateMinConstraints) { content() }
+  }
 }
 
 /**
@@ -32,15 +43,21 @@ fun MTBox(colors: Colors, modifier: Modifier = Modifier, content: @Composable Bo
  *
  * @param inputStream The [InputStream] containing the theme configuration for the Malefic Theme.
  * @param modifier The [Modifier] to be applied to the [Box].
+ * @param contentAlignment The [Alignment] of the content inside the [Box].
+ * @param propagateMinConstraints Whether the minimum constraints should be propagated.
  * @param content The content to be displayed inside the [Box].
  */
 @Composable
 fun MaleficBox(
   inputStream: InputStream,
   modifier: Modifier = Modifier,
+  contentAlignment: Alignment = Alignment.TopStart,
+  propagateMinConstraints: Boolean = false,
   content: @Composable BoxScope.() -> Unit,
 ) {
-  MaleficTheme(inputStream) { BackgroundBox(modifier) { content() } }
+  MaleficTheme(inputStream) {
+    BackgroundBox(modifier, contentAlignment, propagateMinConstraints) { content() }
+  }
 }
 
 /**
@@ -49,24 +66,43 @@ fun MaleficBox(
  *
  * @param themeConfig The [ThemeConfig] configuration for the Malefic Theme.
  * @param modifier The [Modifier] to be applied to the [Box].
+ * @param contentAlignment The [Alignment] of the content inside the [Box].
+ * @param propagateMinConstraints Whether the minimum constraints should be propagated.
  * @param content The content to be displayed inside the [Box].
  */
 @Composable
 fun MaleficBox(
   themeConfig: ThemeConfig,
   modifier: Modifier = Modifier,
+  contentAlignment: Alignment = Alignment.TopStart,
+  propagateMinConstraints: Boolean = false,
   content: @Composable BoxScope.() -> Unit,
 ) {
-  MaleficTheme(themeConfig) { BackgroundBox(modifier) { content() } }
+  MaleficTheme(themeConfig) {
+    BackgroundBox(modifier, contentAlignment, propagateMinConstraints) { content() }
+  }
 }
 
 /**
  * A composable function that creates a [Box] with a background color that fills the maximum size.
  *
  * @param modifier The [Modifier] to be applied to the [Box].
+ * @param contentAlignment The [Alignment] of the content inside the [Box].
+ * @param propagateMinConstraints Whether the minimum constraints should be propagated.
  * @param content The content to be displayed inside the [Box].
  */
 @Composable
-fun BackgroundBox(modifier: Modifier = Modifier, content: @Composable BoxScope.() -> Unit) {
-  Box(modifier = Modifier.fillMaxSize().background(colors.background).then(modifier)) { content() }
+fun BackgroundBox(
+  modifier: Modifier = Modifier,
+  contentAlignment: Alignment = Alignment.TopStart,
+  propagateMinConstraints: Boolean = false,
+  content: @Composable BoxScope.() -> Unit,
+) {
+  Box(
+    modifier = Modifier.fillMaxSize().background(colors.background).then(modifier),
+    contentAlignment,
+    propagateMinConstraints,
+  ) {
+    content()
+  }
 }
