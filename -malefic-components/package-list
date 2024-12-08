@@ -1,7 +1,10 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
 $dokka.location:xyz.malefic.components.box////PointingToDeclaration/-malefic-components/xyz.malefic.components.box/index.html
+$dokka.location:xyz.malefic.components.box//BackgroundBox/#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-background-box.html
 $dokka.location:xyz.malefic.components.box//MTBox/#androidx.compose.material.Colors#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-m-t-box.html
+$dokka.location:xyz.malefic.components.box//MaleficBox/#java.io.InputStream#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-malefic-box.html
+$dokka.location:xyz.malefic.components.box//MaleficBox/#xyz.malefic.theme.ThemeConfig#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-malefic-box.html
 $dokka.location:xyz.malefic.components.precompose////PointingToDeclaration/-malefic-components/xyz.malefic.components.precompose/index.html
 $dokka.location:xyz.malefic.components.precompose//NavWindow/#kotlin.Function0[kotlin.Unit]#androidx.compose.ui.window.WindowState#kotlin.Boolean#kotlin.String#androidx.compose.ui.graphics.painter.Painter?#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Function1[androidx.compose.ui.input.key.KeyEvent,kotlin.Boolean]#kotlin.Function1[androidx.compose.ui.input.key.KeyEvent,kotlin.Boolean]#kotlin.Function1[androidx.compose.ui.window.FrameWindowScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.precompose/-nav-window.html
 $dokka.location:xyz.malefic.components.text.typography////PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/index.html
