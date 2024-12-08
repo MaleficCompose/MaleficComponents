@@ -1,12 +1,14 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
 $dokka.location:xyz.malefic.components.box////PointingToDeclaration/-malefic-components/xyz.malefic.components.box/index.html
-$dokka.location:xyz.malefic.components.box//BackgroundBox/#androidx.compose.ui.Modifier#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-background-box.html
-$dokka.location:xyz.malefic.components.box//MTBox/#androidx.compose.material.Colors#androidx.compose.ui.Modifier#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-m-t-box.html
-$dokka.location:xyz.malefic.components.box//MaleficBox/#java.io.InputStream#androidx.compose.ui.Modifier#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-malefic-box.html
-$dokka.location:xyz.malefic.components.box//MaleficBox/#xyz.malefic.theme.ThemeConfig#androidx.compose.ui.Modifier#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-malefic-box.html
+$dokka.location:xyz.malefic.components.box//BackgroundBox/#androidx.compose.ui.Modifier#androidx.compose.ui.Alignment#kotlin.Boolean#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-background-box.html
+$dokka.location:xyz.malefic.components.box//MaleficBox/#java.io.InputStream#androidx.compose.ui.Modifier#androidx.compose.ui.Alignment#kotlin.Boolean#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-malefic-box.html
+$dokka.location:xyz.malefic.components.box//MaleficBox/#xyz.malefic.theme.ThemeConfig#androidx.compose.ui.Modifier#androidx.compose.ui.Alignment#kotlin.Boolean#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-malefic-box.html
+$dokka.location:xyz.malefic.components.box//MaterialBox/#androidx.compose.material.Colors#androidx.compose.ui.Modifier#androidx.compose.ui.Alignment#kotlin.Boolean#kotlin.Function1[androidx.compose.foundation.layout.BoxScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.box/-material-box.html
 $dokka.location:xyz.malefic.components.precompose////PointingToDeclaration/-malefic-components/xyz.malefic.components.precompose/index.html
 $dokka.location:xyz.malefic.components.precompose//NavWindow/#kotlin.Function0[kotlin.Unit]#androidx.compose.ui.window.WindowState#kotlin.Boolean#kotlin.String#androidx.compose.ui.graphics.painter.Painter?#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Function1[androidx.compose.ui.input.key.KeyEvent,kotlin.Boolean]#kotlin.Function1[androidx.compose.ui.input.key.KeyEvent,kotlin.Boolean]#kotlin.Function1[androidx.compose.ui.window.FrameWindowScope,kotlin.Unit]/PointingToDeclaration/-malefic-components/xyz.malefic.components.precompose/-nav-window.html
+$dokka.location:xyz.malefic.components.switch////PointingToDeclaration/-malefic-components/xyz.malefic.components.switch/index.html
+$dokka.location:xyz.malefic.components.switch//BooleanSwitch/#androidx.compose.runtime.MutableState[kotlin.Boolean]#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.switch/-boolean-switch.html
 $dokka.location:xyz.malefic.components.text.typography////PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/index.html
 $dokka.location:xyz.malefic.components.text.typography//Body1/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-body1.html
 $dokka.location:xyz.malefic.components.text.typography//Body1B/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-body1-b.html
@@ -26,5 +28,6 @@ $dokka.location:xyz.malefic.components.text.typography//Heading6/#kotlin.String#
 $dokka.location:xyz.malefic.components.text.typography//Heading6B/#kotlin.String#androidx.compose.ui.Modifier/PointingToDeclaration/-malefic-components/xyz.malefic.components.text.typography/-heading6-b.html
 xyz.malefic.components.box
 xyz.malefic.components.precompose
+xyz.malefic.components.switch
 xyz.malefic.components.text.typography
 
