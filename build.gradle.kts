@@ -1,6 +1,6 @@
 import cn.lalaki.pub.BaseCentralPortalPlusExtension.PublishingType
 
-val v = "1.0.2"
+val v = "1.0.3"
 val localMavenRepo = uri(layout.buildDirectory.dir("repo").get())
 
 plugins {
@@ -28,6 +28,7 @@ dependencies {
   implementation(compose.animation)
   implementation(compose.foundation)
   implementation(libs.precompose)
+  implementation(libs.malefic.theming)
 }
 
 spotless {
@@ -102,5 +103,5 @@ centralPortalPlus {
 }
 
 tasks.dokkaHtml {
-  outputDirectory.set(layout.buildDirectory.get().asFile.resolve("dokka"))
+  outputDirectory.set(layout.buildDirectory.dir("dokka").get())
 }

@@ -3,9 +3,11 @@ precompose = "1.6.2"
 spotless = "7.0.0.BETA4"
 central = "1.2.5"
 dokka = "1.9.20"
+theme = "1.0.2"
 
 [libraries]
 precompose = { module = "moe.tlaster:precompose", version.ref = "precompose" }
+malefic-theming = { module = "xyz.malefic:malefictheming", version.ref = "theme" }
 
 [plugins]
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
