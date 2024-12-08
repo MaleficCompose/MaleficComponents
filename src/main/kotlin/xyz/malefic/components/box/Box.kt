@@ -14,15 +14,16 @@ import xyz.malefic.theme.MaleficTheme
 import xyz.malefic.theme.ThemeConfig
 
 /**
- * A composable function that applies Material Theming and creates a themed Box with an applied
+ * A composable function that applies Material Theming and creates a themed [Box] with an applied
  * background color.
  *
  * @param colors The colors to be used in the Material Theme.
- * @param content The content to be displayed inside the Box.
+ * @param modifier The [Modifier] to be applied to the [Box].
+ * @param content The content to be displayed inside the [Box].
  */
 @Composable
-fun MTBox(colors: Colors, content: @Composable BoxScope.() -> Unit) {
-  MaterialTheme(colors = colors) { BackgroundBox { content() } }
+fun MTBox(colors: Colors, modifier: Modifier = Modifier, content: @Composable BoxScope.() -> Unit) {
+  MaterialTheme(colors = colors) { BackgroundBox(modifier) { content() } }
 }
 
 /**
@@ -30,11 +31,16 @@ fun MTBox(colors: Colors, content: @Composable BoxScope.() -> Unit) {
  * background color.
  *
  * @param inputStream The [InputStream] containing the theme configuration for the Malefic Theme.
+ * @param modifier The [Modifier] to be applied to the [Box].
  * @param content The content to be displayed inside the [Box].
  */
 @Composable
-fun MaleficBox(inputStream: InputStream, content: @Composable BoxScope.() -> Unit) {
-  MaleficTheme(inputStream) { BackgroundBox { content() } }
+fun MaleficBox(
+  inputStream: InputStream,
+  modifier: Modifier = Modifier,
+  content: @Composable BoxScope.() -> Unit,
+) {
+  MaleficTheme(inputStream) { BackgroundBox(modifier) { content() } }
 }
 
 /**
@@ -42,19 +48,25 @@ fun MaleficBox(inputStream: InputStream, content: @Composable BoxScope.() -> Uni
  * background color.
  *
  * @param themeConfig The [ThemeConfig] configuration for the Malefic Theme.
+ * @param modifier The [Modifier] to be applied to the [Box].
  * @param content The content to be displayed inside the [Box].
  */
 @Composable
-fun MaleficBox(themeConfig: ThemeConfig, content: @Composable BoxScope.() -> Unit) {
-  MaleficTheme(themeConfig) { BackgroundBox { content() } }
+fun MaleficBox(
+  themeConfig: ThemeConfig,
+  modifier: Modifier = Modifier,
+  content: @Composable BoxScope.() -> Unit,
+) {
+  MaleficTheme(themeConfig) { BackgroundBox(modifier) { content() } }
 }
 
 /**
  * A composable function that creates a [Box] with a background color that fills the maximum size.
  *
+ * @param modifier The [Modifier] to be applied to the [Box].
  * @param content The content to be displayed inside the [Box].
  */
 @Composable
-fun BackgroundBox(content: @Composable BoxScope.() -> Unit) {
-  Box(modifier = Modifier.fillMaxSize().background(colors.background)) { content() }
+fun BackgroundBox(modifier: Modifier = Modifier, content: @Composable BoxScope.() -> Unit) {
+  Box(modifier = Modifier.fillMaxSize().background(colors.background).then(modifier)) { content() }
 }
