@@ -24,7 +24,7 @@ module.exports = {
     {value: 'revert', name: 'revert:   Revert to a prior commit'},
   ],
 
-  scopes: [{name: 'box'}, {name: 'precompose'}, {name: 'typography'}],
+  scopes: [{name: 'box'}, {name: 'precompose'}, {name: 'switch'}, {name: 'text'}],
 
   usePreparedCommit: false, // to re-use commit from ./.git/COMMIT_EDITMSG
   allowTicketNumber: false,

@@ -1,0 +1,23 @@
+package xyz.malefic.components.switch
+
+import androidx.compose.material.Switch
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+
+/**
+ * A composable function that displays a [Switch] tied to the given [Boolean] value.
+ *
+ * @param state The mutable state of the [Boolean] value.
+ * @param modifier The modifier to be applied to the [Switch] composable.
+ */
+@Composable
+fun BooleanSwitch(
+    state: MutableState<Boolean>,
+    modifier: Modifier = Modifier
+) {
+    Switch(
+        checked = state.value,
+        onCheckedChange = { state.value = it },
+        modifier = modifier
+    )
+}
