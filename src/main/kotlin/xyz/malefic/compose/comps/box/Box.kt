@@ -1,4 +1,4 @@
-package xyz.malefic.components.box
+package xyz.malefic.compose.comps.box
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -10,9 +10,9 @@ import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import xyz.malefic.compose.theming.MaleficTheme
+import xyz.malefic.compose.theming.ThemeConfig
 import java.io.InputStream
-import xyz.malefic.theme.MaleficTheme
-import xyz.malefic.theme.ThemeConfig
 
 /**
  * A composable function that applies Material Theming and creates a themed [Box] with an applied
@@ -26,15 +26,15 @@ import xyz.malefic.theme.ThemeConfig
  */
 @Composable
 fun MaterialBox(
-  colors: Colors,
-  modifier: Modifier = Modifier,
-  contentAlignment: Alignment = Alignment.TopStart,
-  propagateMinConstraints: Boolean = false,
-  content: @Composable BoxScope.() -> Unit,
+    colors: Colors,
+    modifier: Modifier = Modifier,
+    contentAlignment: Alignment = Alignment.TopStart,
+    propagateMinConstraints: Boolean = false,
+    content: @Composable BoxScope.() -> Unit,
 ) {
-  MaterialTheme(colors = colors) {
-    BackgroundBox(modifier, contentAlignment, propagateMinConstraints) { content() }
-  }
+    MaterialTheme(colors = colors) {
+        BackgroundBox(modifier, contentAlignment, propagateMinConstraints) { content() }
+    }
 }
 
 /**
@@ -49,15 +49,15 @@ fun MaterialBox(
  */
 @Composable
 fun MaleficBox(
-  inputStream: InputStream,
-  modifier: Modifier = Modifier,
-  contentAlignment: Alignment = Alignment.TopStart,
-  propagateMinConstraints: Boolean = false,
-  content: @Composable BoxScope.() -> Unit,
+    inputStream: InputStream,
+    modifier: Modifier = Modifier,
+    contentAlignment: Alignment = Alignment.TopStart,
+    propagateMinConstraints: Boolean = false,
+    content: @Composable BoxScope.() -> Unit,
 ) {
-  MaleficTheme(inputStream) {
-    BackgroundBox(modifier, contentAlignment, propagateMinConstraints) { content() }
-  }
+    MaleficTheme(inputStream) {
+        BackgroundBox(modifier, contentAlignment, propagateMinConstraints) { content() }
+    }
 }
 
 /**
@@ -72,15 +72,15 @@ fun MaleficBox(
  */
 @Composable
 fun MaleficBox(
-  themeConfig: ThemeConfig,
-  modifier: Modifier = Modifier,
-  contentAlignment: Alignment = Alignment.TopStart,
-  propagateMinConstraints: Boolean = false,
-  content: @Composable BoxScope.() -> Unit,
+    themeConfig: ThemeConfig,
+    modifier: Modifier = Modifier,
+    contentAlignment: Alignment = Alignment.TopStart,
+    propagateMinConstraints: Boolean = false,
+    content: @Composable BoxScope.() -> Unit,
 ) {
-  MaleficTheme(themeConfig) {
-    BackgroundBox(modifier, contentAlignment, propagateMinConstraints) { content() }
-  }
+    MaleficTheme(themeConfig) {
+        BackgroundBox(modifier, contentAlignment, propagateMinConstraints) { content() }
+    }
 }
 
 /**
@@ -93,16 +93,16 @@ fun MaleficBox(
  */
 @Composable
 fun BackgroundBox(
-  modifier: Modifier = Modifier,
-  contentAlignment: Alignment = Alignment.TopStart,
-  propagateMinConstraints: Boolean = false,
-  content: @Composable BoxScope.() -> Unit,
+    modifier: Modifier = Modifier,
+    contentAlignment: Alignment = Alignment.TopStart,
+    propagateMinConstraints: Boolean = false,
+    content: @Composable BoxScope.() -> Unit,
 ) {
-  Box(
-    modifier = Modifier.fillMaxSize().background(colors.background).then(modifier),
-    contentAlignment,
-    propagateMinConstraints,
-  ) {
-    content()
-  }
+    Box(
+        modifier = Modifier.fillMaxSize().background(colors.background).then(modifier),
+        contentAlignment,
+        propagateMinConstraints,
+    ) {
+        content()
+    }
 }

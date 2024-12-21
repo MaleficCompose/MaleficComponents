@@ -1,4 +1,4 @@
-package xyz.malefic.components.text.typography
+package xyz.malefic.compose.comps.text.typography
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.typography
@@ -13,13 +13,15 @@ import androidx.compose.ui.Modifier
  * @param modifier The modifier to be applied to the Text composable.
  */
 @Composable
-fun Heading1(text: String, modifier: Modifier = Modifier) =
-  Text(
+fun Heading1(
+    text: String,
+    modifier: Modifier = Modifier,
+) = Text(
     text = text,
     style = typography.h1,
     color = MaterialTheme.colors.onBackground,
     modifier = modifier,
-  )
+)
 
 /**
  * A composable function that displays a heading with H2 typography style.
@@ -28,13 +30,15 @@ fun Heading1(text: String, modifier: Modifier = Modifier) =
  * @param modifier The modifier to be applied to the Text composable.
  */
 @Composable
-fun Heading2(text: String, modifier: Modifier = Modifier) =
-  Text(
+fun Heading2(
+    text: String,
+    modifier: Modifier = Modifier,
+) = Text(
     text = text,
     style = typography.h2,
     color = MaterialTheme.colors.onBackground,
     modifier = modifier,
-  )
+)
 
 /**
  * A composable function that displays a heading with H3 typography style.
@@ -43,13 +47,15 @@ fun Heading2(text: String, modifier: Modifier = Modifier) =
  * @param modifier The modifier to be applied to the Text composable.
  */
 @Composable
-fun Heading3(text: String, modifier: Modifier = Modifier) =
-  Text(
+fun Heading3(
+    text: String,
+    modifier: Modifier = Modifier,
+) = Text(
     text = text,
     style = typography.h3,
     color = MaterialTheme.colors.onBackground,
     modifier = modifier,
-  )
+)
 
 /**
  * A composable function that displays a heading with H4 typography style.
@@ -58,13 +64,15 @@ fun Heading3(text: String, modifier: Modifier = Modifier) =
  * @param modifier The modifier to be applied to the Text composable.
  */
 @Composable
-fun Heading4(text: String, modifier: Modifier = Modifier) =
-  Text(
+fun Heading4(
+    text: String,
+    modifier: Modifier = Modifier,
+) = Text(
     text = text,
     style = typography.h4,
     color = MaterialTheme.colors.onBackground,
     modifier = modifier,
-  )
+)
 
 /**
  * A composable function that displays a heading with H5 typography style.
@@ -73,13 +81,15 @@ fun Heading4(text: String, modifier: Modifier = Modifier) =
  * @param modifier The modifier to be applied to the Text composable.
  */
 @Composable
-fun Heading5(text: String, modifier: Modifier = Modifier) =
-  Text(
+fun Heading5(
+    text: String,
+    modifier: Modifier = Modifier,
+) = Text(
     text = text,
     style = typography.h5,
     color = MaterialTheme.colors.onBackground,
     modifier = modifier,
-  )
+)
 
 /**
  * A composable function that displays a heading with H6 typography style.
@@ -88,13 +98,15 @@ fun Heading5(text: String, modifier: Modifier = Modifier) =
  * @param modifier The modifier to be applied to the Text composable.
  */
 @Composable
-fun Heading6(text: String, modifier: Modifier = Modifier) =
-  Text(
+fun Heading6(
+    text: String,
+    modifier: Modifier = Modifier,
+) = Text(
     text = text,
     style = typography.h6,
     color = MaterialTheme.colors.onBackground,
     modifier = modifier,
-  )
+)
 
 /**
  * A composable function that displays a body text with Body1 typography style.
@@ -103,13 +115,15 @@ fun Heading6(text: String, modifier: Modifier = Modifier) =
  * @param modifier The modifier to be applied to the Text composable.
  */
 @Composable
-fun Body1(text: String, modifier: Modifier = Modifier) =
-  Text(
+fun Body1(
+    text: String,
+    modifier: Modifier = Modifier,
+) = Text(
     text = text,
     style = typography.body1,
     color = MaterialTheme.colors.onBackground,
     modifier = modifier,
-  )
+)
 
 /**
  * A composable function that displays a body text with Body2 typography style.
@@ -118,10 +132,12 @@ fun Body1(text: String, modifier: Modifier = Modifier) =
  * @param modifier The modifier to be applied to the Text composable.
  */
 @Composable
-fun Body2(text: String, modifier: Modifier = Modifier) =
-  Text(
+fun Body2(
+    text: String,
+    modifier: Modifier = Modifier,
+) = Text(
     text = text,
     style = typography.body2,
     color = MaterialTheme.colors.onBackground,
     modifier = modifier,
-  )
+)

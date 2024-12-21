@@ -1,7 +1,8 @@
-package xyz.malefic.components.switch
+package xyz.malefic.compose.comps.switch
 
 import androidx.compose.material.Switch
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 
 /**
@@ -13,11 +14,11 @@ import androidx.compose.ui.Modifier
 @Composable
 fun BooleanSwitch(
     state: MutableState<Boolean>,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Switch(
         checked = state.value,
         onCheckedChange = { state.value = it },
-        modifier = modifier
+        modifier = modifier,
     )
 }
