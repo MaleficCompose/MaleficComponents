@@ -1,6 +1,6 @@
 [versions]
 precompose = "1.6.2"
-central = "1.2.5"
+central = "1.2.6"
 dokka = "2.0.0"
 theme = "1.1.2"
 compose = "1.8.0-dev1920"
