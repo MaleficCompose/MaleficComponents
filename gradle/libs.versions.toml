@@ -4,7 +4,7 @@ central = "1.2.6"
 dokka = "2.0.0"
 theme = "1.1.2"
 compose = "1.8.0-dev1920"
-kotlin = "2.1.0"
+kotlin = "2.1.10"
 kotlinter = "5.0.1"
 
 [libraries]
