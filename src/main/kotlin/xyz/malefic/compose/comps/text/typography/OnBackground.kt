@@ -1,25 +1,27 @@
 package xyz.malefic.compose.comps.text.typography
 
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import xyz.malefic.compose.comps.text.typography.ColorType.OnBackground
 
 /**
  * A composable function that displays a heading with H1 typography style.
  *
  * @param text The text to be displayed.
  * @param modifier The modifier to be applied to the Text composable.
+ * @param colorType The color type to be used for the text.
  */
 @Composable
 fun Heading1(
     text: String,
     modifier: Modifier = Modifier,
+    colorType: ColorType = OnBackground,
 ) = Text(
     text = text,
     style = typography.h1,
-    color = MaterialTheme.colors.onBackground,
+    color = colorType.color,
     modifier = modifier,
 )
 
@@ -28,15 +30,17 @@ fun Heading1(
  *
  * @param text The text to be displayed.
  * @param modifier The modifier to be applied to the Text composable.
+ * @param colorType The color type to be used for the text.
  */
 @Composable
 fun Heading2(
     text: String,
     modifier: Modifier = Modifier,
+    colorType: ColorType = OnBackground,
 ) = Text(
     text = text,
     style = typography.h2,
-    color = MaterialTheme.colors.onBackground,
+    color = colorType.color,
     modifier = modifier,
 )
 
@@ -45,15 +49,17 @@ fun Heading2(
  *
  * @param text The text to be displayed.
  * @param modifier The modifier to be applied to the Text composable.
+ * @param colorType The color type to be used for the text.
  */
 @Composable
 fun Heading3(
     text: String,
     modifier: Modifier = Modifier,
+    colorType: ColorType = OnBackground,
 ) = Text(
     text = text,
     style = typography.h3,
-    color = MaterialTheme.colors.onBackground,
+    color = colorType.color,
     modifier = modifier,
 )
 
@@ -62,15 +68,17 @@ fun Heading3(
  *
  * @param text The text to be displayed.
  * @param modifier The modifier to be applied to the Text composable.
+ * @param colorType The color type to be used for the text.
  */
 @Composable
 fun Heading4(
     text: String,
     modifier: Modifier = Modifier,
+    colorType: ColorType = OnBackground,
 ) = Text(
     text = text,
     style = typography.h4,
-    color = MaterialTheme.colors.onBackground,
+    color = colorType.color,
     modifier = modifier,
 )
 
@@ -79,15 +87,17 @@ fun Heading4(
  *
  * @param text The text to be displayed.
  * @param modifier The modifier to be applied to the Text composable.
+ * @param colorType The color type to be used for the text.
  */
 @Composable
 fun Heading5(
     text: String,
     modifier: Modifier = Modifier,
+    colorType: ColorType = OnBackground,
 ) = Text(
     text = text,
     style = typography.h5,
-    color = MaterialTheme.colors.onBackground,
+    color = colorType.color,
     modifier = modifier,
 )
 
@@ -96,15 +106,17 @@ fun Heading5(
  *
  * @param text The text to be displayed.
  * @param modifier The modifier to be applied to the Text composable.
+ * @param colorType The color type to be used for the text.
  */
 @Composable
 fun Heading6(
     text: String,
     modifier: Modifier = Modifier,
+    colorType: ColorType = OnBackground,
 ) = Text(
     text = text,
     style = typography.h6,
-    color = MaterialTheme.colors.onBackground,
+    color = colorType.color,
     modifier = modifier,
 )
 
@@ -113,15 +125,17 @@ fun Heading6(
  *
  * @param text The text to be displayed.
  * @param modifier The modifier to be applied to the Text composable.
+ * @param colorType The color type to be used for the text.
  */
 @Composable
 fun Body1(
     text: String,
     modifier: Modifier = Modifier,
+    colorType: ColorType = OnBackground,
 ) = Text(
     text = text,
     style = typography.body1,
-    color = MaterialTheme.colors.onBackground,
+    color = colorType.color,
     modifier = modifier,
 )
 
@@ -130,14 +144,16 @@ fun Body1(
  *
  * @param text The text to be displayed.
  * @param modifier The modifier to be applied to the Text composable.
+ * @param colorType The color type to be used for the text.
  */
 @Composable
 fun Body2(
     text: String,
     modifier: Modifier = Modifier,
+    colorType: ColorType = OnBackground,
 ) = Text(
     text = text,
     style = typography.body2,
-    color = MaterialTheme.colors.onBackground,
+    color = colorType.color,
     modifier = modifier,
 )

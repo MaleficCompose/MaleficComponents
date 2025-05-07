@@ -1,11 +1,11 @@
 import cn.lalaki.pub.BaseCentralPortalPlusExtension.PublishingType
 
-val user = "MaleficCompose"
-val repo = "MaleficComponents"
-val g = "xyz.malefic.compose"
-val artifact = "comps"
-val v = "1.1.0"
-val desc = "A Compose Desktop library containing useful UI elements and components"
+val user: String by project
+val repo: String by project
+val g: String by project
+val artifact: String by project
+val v: String by project
+val desc: String by project
 
 val localMavenRepo = uri(layout.buildDirectory.dir("repo").get())
 
@@ -72,7 +72,7 @@ publishing {
                 licenses {
                     license {
                         name.set("MIT License")
-                        url.set("https://opensource.org/licenses/MIT")
+                        url.set("https://mit.malefic.xyz")
                     }
                 }
                 scm {
@@ -113,7 +113,7 @@ tasks.apply {
     test {
         useJUnitPlatform()
     }
-    create("formatAndLintKotlin") {
+    register("formatAndLintKotlin") {
         group = "formatting"
         description = "Fix Kotlin code style deviations with kotlinter"
         dependsOn(formatKotlin)
