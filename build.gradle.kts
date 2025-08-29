@@ -115,8 +115,8 @@ tasks.apply {
     register("formatAndLintKotlin") {
         group = "formatting"
         description = "Fix Kotlin code style deviations with kotlinter"
-        dependsOn(formatKotlin)
-        dependsOn(lintKotlin)
+        dependsOn(named("formatKotlin"))
+        dependsOn(named("lintKotlin"))
     }
     check {
         dependsOn("installKotlinterPrePushHook")
