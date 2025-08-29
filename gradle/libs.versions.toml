@@ -5,7 +5,7 @@ dokka = "2.0.0"
 theme = "1.1.2"
 compose = "1.8.10-alpha01"
 kotlin = "2.2.10"
-kotlinter = "5.0.2"
+kotlinter = "5.2.0"
 
 [libraries]
 precompose = { group = "moe.tlaster", name = "precompose", version.ref = "precompose" }
