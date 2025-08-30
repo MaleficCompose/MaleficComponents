@@ -47,18 +47,8 @@ fun InputField(
         value = value,
         onValueChange = onValueChange,
         modifier = modifier,
-        label =
-            if (label != null) {
-                { Text(label) }
-            } else {
-                null
-            },
-        placeholder =
-            if (placeholder != null) {
-                { Text(placeholder) }
-            } else {
-                null
-            },
+        label = label?.let { @Composable { Text(label) } },
+        placeholder = placeholder?.let { @Composable { Text(placeholder) } },
         enabled = enabled,
         readOnly = readOnly,
         isError = isError,
@@ -107,18 +97,8 @@ fun OutlinedInputField(
         value = value,
         onValueChange = onValueChange,
         modifier = modifier,
-        label =
-            if (label != null) {
-                { Text(label) }
-            } else {
-                null
-            },
-        placeholder =
-            if (placeholder != null) {
-                { Text(placeholder) }
-            } else {
-                null
-            },
+        label = label?.let { @Composable { Text(label) } },
+        placeholder = placeholder?.let { @Composable { Text(placeholder) } },
         enabled = enabled,
         readOnly = readOnly,
         isError = isError,

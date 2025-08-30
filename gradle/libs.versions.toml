@@ -6,9 +6,9 @@ theme = "2.0.5"
 compose = "1.8.10-alpha01"
 kotlin = "2.2.10"
 kotlinter = "5.2.0"
-agp = "8.12.0"
+agp = "8.11.1"
 android-minSdk = "24"
-android-compileSdk = "34"
+android-compileSdk = "36"
 
 [libraries]
 precompose = { group = "moe.tlaster", name = "precompose", version.ref = "precompose" }
@@ -16,7 +16,6 @@ malefic-theming = { module = "xyz.malefic.compose:theming", version.ref = "theme
 
 [plugins]
 compose-kotlin = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 compose = { id = "org.jetbrains.compose", version.ref = "compose" }

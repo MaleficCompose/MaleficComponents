@@ -18,16 +18,16 @@ import androidx.compose.ui.graphics.Shape
  * A composable function that displays a standard Material [Button] with common defaults.
  *
  * @param text The text to display on the button.
- * @param onClick Callback to be invoked when the button is clicked.
  * @param modifier The [Modifier] to be applied to the button.
  * @param enabled Whether the button is enabled or disabled.
+ * @param onClick Callback to be invoked when the button is clicked.
  */
 @Composable
 fun PrimaryButton(
     text: String,
-    onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
+    onClick: () -> Unit,
 ) {
     Button(
         onClick = onClick,
@@ -83,16 +83,16 @@ fun CustomButton(
  * A composable function that displays an outlined Material [OutlinedButton] with common defaults.
  *
  * @param text The text to display on the button.
- * @param onClick Callback to be invoked when the button is clicked.
  * @param modifier The [Modifier] to be applied to the button.
  * @param enabled Whether the button is enabled or disabled.
+ * @param onClick Callback to be invoked when the button is clicked.
  */
 @Composable
 fun SecondaryButton(
     text: String,
-    onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
+    onClick: () -> Unit,
 ) {
     OutlinedButton(
         onClick = onClick,
@@ -107,16 +107,16 @@ fun SecondaryButton(
  * A composable function that displays a text-only Material [TextButton] with common defaults.
  *
  * @param text The text to display on the button.
- * @param onClick Callback to be invoked when the button is clicked.
  * @param modifier The [Modifier] to be applied to the button.
  * @param enabled Whether the button is enabled or disabled.
+ * @param onClick Callback to be invoked when the button is clicked.
  */
 @Composable
 fun TertiaryButton(
     text: String,
-    onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
+    onClick: () -> Unit,
 ) {
     TextButton(
         onClick = onClick,
