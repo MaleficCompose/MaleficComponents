@@ -71,7 +71,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                // Android-specific dependencies if needed
+                implementation(libs.malefic.theming)
             }
         }
     }
