@@ -55,6 +55,7 @@ kotlin {
                 implementation(compose.foundation)
                 implementation(compose.material)
                 implementation(compose.animation)
+                implementation(libs.malefic.theming)
             }
         }
         val commonTest by getting {
@@ -66,12 +67,11 @@ kotlin {
             dependencies {
                 implementation(compose.desktop.common)
                 implementation(libs.precompose)
-                implementation(libs.malefic.theming)
             }
         }
         val androidMain by getting {
             dependencies {
-                implementation(libs.malefic.theming)
+                // Android-specific dependencies can go here
             }
         }
     }

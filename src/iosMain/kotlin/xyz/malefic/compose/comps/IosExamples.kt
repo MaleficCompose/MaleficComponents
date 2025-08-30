@@ -11,19 +11,19 @@ import xyz.malefic.compose.comps.text.typography.Heading1
 import xyz.malefic.compose.theming.ThemeConfig
 
 /**
- * Android-specific example usage demonstrating MaleficBox with ThemeConfig.
- * This example shows theming support available on JVM and Android platforms.
+ * iOS-specific example usage demonstrating MaleficBox with ThemeConfig.
+ * This example shows that theming support is now available on iOS as well!
  */
 @Composable
-fun AndroidMaleficBoxExample(themeConfig: ThemeConfig) {
+fun IosMaleficBoxExample(themeConfig: ThemeConfig) {
     val switchState = remember { mutableStateOf(false) }
 
     MaleficBox(themeConfig = themeConfig) {
         Column {
-            Heading1("MaleficBox Example (Android)")
-            Body1("This MaleficBox works on JVM and Android platforms!")
-            Body1("Using ThemeConfig for multiplatform theming.")
-            Body1("Perfect for Android apps with custom theming.")
+            Heading1("MaleficBox Example (iOS)")
+            Body1("This MaleficBox now works on iOS too!")
+            Body1("Using ThemeConfig for true multiplatform theming across Android, JVM, and iOS.")
+            Body1("Perfect for iOS apps with custom theming.")
 
             BooleanSwitch(state = switchState)
         }
