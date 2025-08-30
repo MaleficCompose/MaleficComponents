@@ -1,4 +1,6 @@
 import cn.lalaki.pub.BaseCentralPortalPlusExtension.PublishingType
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 val user: String by project
 val repo: String by project
@@ -11,7 +13,8 @@ val localMavenRepo = uri(layout.buildDirectory.dir("repo").get())
 
 plugins {
     alias(libs.plugins.compose.kotlin)
-    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlinter)
     alias(libs.plugins.compose)
     alias(libs.plugins.central)
@@ -29,59 +32,77 @@ repositories {
     google()
 }
 
-dependencies {
-    implementation(compose.desktop.common)
-    implementation(compose.animation)
-    implementation(compose.foundation)
-    implementation(libs.precompose)
-    implementation(libs.malefic.theming)
+kotlin {
+    jvm()
+
+    androidTarget {
+        publishLibraryVariants("release")
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_17)
+        }
+    }
+
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
+
+    @Suppress("unused")
+    sourceSets {
+        val commonMain by getting {
+            dependencies {
+                implementation(compose.ui)
+                implementation(compose.foundation)
+                implementation(compose.material)
+                implementation(compose.animation)
+                implementation(libs.malefic.theming)
+            }
+        }
+        val commonTest by getting {
+            dependencies {
+                // Add common test dependencies if needed
+            }
+        }
+        val jvmMain by getting {
+            dependencies {
+                implementation(compose.desktop.common)
+                implementation(libs.precompose)
+            }
+        }
+        val androidMain by getting {
+            dependencies {
+                // Android-specific dependencies can go here
+            }
+        }
+    }
+}
+
+android {
+    namespace = "$g.$artifact"
+    compileSdk =
+        libs.versions.android.compileSdk
+            .get()
+            .toInt()
+    defaultConfig {
+        minSdk =
+            libs.versions.android.minSdk
+                .get()
+                .toInt()
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-    withJavadocJar()
-    withSourcesJar()
-}
-
-kotlin {
-    jvmToolchain {
-        this.languageVersion.set(JavaLanguageVersion.of(17))
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
 publishing {
     publications {
-        create<MavenPublication>("maven") {
-            groupId = g
-            artifactId = artifact
-            version = v
-
-            from(components["java"])
-
-            pom {
-                name.set(repo)
-                description.set(desc)
-                url.set("https://github.com/$user/$repo")
-                developers {
-                    developer {
-                        name.set("Om Gupta")
-                        email.set("ogupta4242@gmail.com")
-                    }
-                }
-                licenses {
-                    license {
-                        name.set("MIT License")
-                        url.set("https://mit.malefic.xyz")
-                    }
-                }
-                scm {
-                    connection.set("scm:git:git://github.com/$user/$repo.git")
-                    developerConnection.set("scm:git:ssh://github.com/$user/$repo.git")
-                    url.set("https://github.com/$user/$repo")
-                }
-            }
-        }
         repositories {
             maven {
                 url = localMavenRepo
@@ -108,9 +129,6 @@ tasks.apply {
     }
     publish {
         dependsOn(named("formatAndLintKotlin"))
-    }
-    test {
-        useJUnitPlatform()
     }
     register("formatAndLintKotlin") {
         group = "formatting"
