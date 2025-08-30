@@ -1,4 +1,3 @@
-import cn.lalaki.pub.BaseCentralPortalPlusExtension.PublishingType
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
@@ -9,18 +8,14 @@ val artifact: String by project
 val v: String by project
 val desc: String by project
 
-val localMavenRepo = uri(layout.buildDirectory.dir("repo").get())
-
 plugins {
-    alias(libs.plugins.compose.kotlin)
-    alias(libs.plugins.kotlin.multiplatform)
+    kotlin("plugin.compose") version libs.versions.kotlin
+    kotlin("multiplatform") version libs.versions.kotlin
+    alias(libs.plugins.vanniktech.mavenPublish)
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlinter)
     alias(libs.plugins.compose)
-    alias(libs.plugins.central)
     alias(libs.plugins.dokka)
-    `maven-publish`
-    signing
 }
 
 group = g
@@ -58,11 +53,6 @@ kotlin {
                 implementation(libs.malefic.theming)
             }
         }
-        val commonTest by getting {
-            dependencies {
-                // Add common test dependencies if needed
-            }
-        }
         val jvmMain by getting {
             dependencies {
                 implementation(compose.desktop.common)
@@ -70,9 +60,7 @@ kotlin {
             }
         }
         val androidMain by getting {
-            dependencies {
-                // Android-specific dependencies can go here
-            }
+            dependencies { }
         }
     }
 }
@@ -96,30 +84,11 @@ android {
 }
 
 java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
-    }
+    withSourcesJar()
 }
 
-publishing {
-    publications {
-        repositories {
-            maven {
-                url = localMavenRepo
-            }
-        }
-    }
-}
-
-signing {
-    useGpgCmd()
-    sign(publishing.publications)
-}
-
-centralPortalPlus {
-    url = localMavenRepo
-    tokenXml = uri(layout.projectDirectory.file("user_token.xml"))
-    publishingType = PublishingType.AUTOMATIC
+kotlin {
+    jvmToolchain(17)
 }
 
 tasks.apply {
@@ -144,5 +113,41 @@ tasks.apply {
 dokka {
     dokkaPublications.html {
         outputDirectory.set(layout.buildDirectory.dir("dokka"))
+    }
+    pluginsConfiguration.html {
+        footerMessage.set("&copy; 2025 Om Gupta &lt;ogupta4242@gmail.com&gt;")
+    }
+}
+
+mavenPublishing {
+    publishToMavenCentral()
+
+    signAllPublications()
+
+    coordinates(g, artifact, v)
+
+    pom {
+        name = repo
+        description = desc
+        inceptionYear = "2025"
+        url = "https://github.com/$user/$repo"
+        licenses {
+            license {
+                name = "MIT License"
+                url = "https://mit.malefic.xyz"
+            }
+        }
+        developers {
+            developer {
+                name = "Om Gupta"
+                email = "ogupta4242@gmail.com"
+                url = "malefic.xyz"
+            }
+        }
+        scm {
+            url = "https://github.com/$user/$repo"
+            connection = "scm:git:git://github.com/$user/$repo.git"
+            developerConnection = "scm:git:ssh://github.com/$user/$repo.git"
+        }
     }
 }
