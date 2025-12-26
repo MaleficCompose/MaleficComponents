@@ -8,7 +8,7 @@ kotlinter = "5.2.0"
 agp = "8.11.1"
 android-minSdk = "24"
 android-compileSdk = "36"
-vanniktech = "0.34.0"
+vanniktech = "0.35.0"
 
 [libraries]
 precompose = { group = "moe.tlaster", name = "precompose", version.ref = "precompose" }
