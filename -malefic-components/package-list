@@ -52,7 +52,7 @@ $dokka.location:xyz.malefic.compose.comps.text.typography/ColorType/valueOf/#kot
 $dokka.location:xyz.malefic.compose.comps.text.typography/ColorType/values/#/PointingToDeclaration/-malefic-components/xyz.malefic.compose.comps.text.typography/-color-type/values.html
 $dokka.location:xyz.malefic.compose.comps////PointingToDeclaration/-malefic-components/xyz.malefic.compose.comps/index.html
 $dokka.location:xyz.malefic.compose.comps//ExampleUsage/#/PointingToDeclaration/-malefic-components/xyz.malefic.compose.comps/-example-usage.html
-$dokka.location:xyz.malefic.compose.comps//IosMaleficBoxExample/#[Error type: Unresolved type for ThemeConfig]/PointingToDeclaration/-malefic-components/xyz.malefic.compose.comps/-ios-malefic-box-example.html
+$dokka.location:xyz.malefic.compose.comps//IosMaleficBoxExample/#xyz.malefic.compose.theming.ThemeConfig/PointingToDeclaration/-malefic-components/xyz.malefic.compose.comps/-ios-malefic-box-example.html
 $dokka.location:xyz.malefic.compose.comps//JvmInputStreamMaleficBoxExample/#java.io.InputStream/PointingToDeclaration/-malefic-components/xyz.malefic.compose.comps/-jvm-input-stream-malefic-box-example.html
 $dokka.location:xyz.malefic.compose.comps//MultiplatformMaleficBoxExample/#xyz.malefic.compose.theming.ThemeConfig/PointingToDeclaration/-malefic-components/xyz.malefic.compose.comps/-multiplatform-malefic-box-example.html
 xyz.malefic.compose.comps
