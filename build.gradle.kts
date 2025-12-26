@@ -60,7 +60,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(compose.material)
+                implementation(compose.material3)
                 implementation(libs.malefic.theming)
             }
         }
