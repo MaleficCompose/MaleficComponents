@@ -6,8 +6,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import xyz.malefic.compose.comps.box.MaleficBox
 import xyz.malefic.compose.comps.switch.BooleanSwitch
-import xyz.malefic.compose.comps.text.typography.Body1
-import xyz.malefic.compose.comps.text.typography.Heading1
+import xyz.malefic.compose.comps.text.Body
+import xyz.malefic.compose.comps.text.Headline
 import java.io.InputStream
 
 /**
@@ -21,10 +21,10 @@ fun JvmInputStreamMaleficBoxExample(inputStream: InputStream) {
 
     MaleficBox(inputStream = inputStream) {
         Column {
-            Heading1("MaleficBox Example (JVM InputStream)")
-            Body1("This MaleficBox is JVM-only due to InputStream usage.")
-            Body1("Perfect for desktop applications with file-based themes.")
-            Body1("For multiplatform theming, use the ThemeConfig overload.")
+            Headline("MaleficBox Example (JVM InputStream)")
+            Body("This MaleficBox is JVM-only due to InputStream usage.")
+            Body("Perfect for desktop applications with file-based themes.")
+            Body("For multiplatform theming, use the ThemeConfig overload.")
 
             BooleanSwitch(state = switchState)
         }

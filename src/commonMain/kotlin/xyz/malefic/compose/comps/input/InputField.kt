@@ -3,12 +3,14 @@ package xyz.malefic.compose.comps.input
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.material.Text
-import androidx.compose.material.TextField
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.VisualTransformation
+import xyz.malefic.compose.comps.text.Body
 
 /**
  * A composable function that displays a standard Material [TextField] with common defaults.
@@ -97,8 +99,8 @@ fun OutlinedInputField(
         value = value,
         onValueChange = onValueChange,
         modifier = modifier,
-        label = label?.let { @Composable { Text(label) } },
-        placeholder = placeholder?.let { @Composable { Text(placeholder) } },
+        label = label?.let { @Composable { Body(label, color = MaterialTheme.colorScheme.onPrimary) } },
+        placeholder = placeholder?.let { @Composable { Body(placeholder, color = MaterialTheme.colorScheme.onPrimary) } },
         enabled = enabled,
         readOnly = readOnly,
         isError = isError,

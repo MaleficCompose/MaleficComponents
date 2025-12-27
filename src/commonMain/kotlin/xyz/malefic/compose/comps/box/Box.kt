@@ -4,9 +4,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Colors
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.MaterialTheme.colors
+import androidx.compose.material3.ColorScheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,13 +24,13 @@ import xyz.malefic.compose.theming.ThemeConfig
  */
 @Composable
 fun MaterialBox(
-    colors: Colors,
+    colors: ColorScheme,
     modifier: Modifier = Modifier,
     contentAlignment: Alignment = Alignment.TopStart,
     propagateMinConstraints: Boolean = false,
     content: @Composable BoxScope.() -> Unit,
 ) {
-    MaterialTheme(colors = colors) {
+    MaterialTheme(colorScheme = colors) {
         BackgroundBox(modifier, contentAlignment, propagateMinConstraints) { content() }
     }
 }
@@ -75,7 +74,7 @@ fun BackgroundBox(
     content: @Composable BoxScope.() -> Unit,
 ) {
     Box(
-        modifier = Modifier.fillMaxSize().background(colors.background).then(modifier),
+        modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).then(modifier),
         contentAlignment,
         propagateMinConstraints,
     ) {
